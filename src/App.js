@@ -1,15 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import { HomeIcon, HomeIconSelected, ExploreIcon, TwitterIcon, ExploreIconSelected } from './components/icon';
+import Nav from './components/Nav';
+import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   return (
     <div className="App">
-        <TwitterIcon/>
-        <HomeIcon/>
-        <HomeIconSelected/>
-        <ExploreIcon/>
-        <ExploreIconSelected/>
+      <GlobalStyle/>
+      <Nav/>
     </div>
   );
 }

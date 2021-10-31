@@ -3,6 +3,7 @@ import React from "react";
 export const TwitterIcon = () => (
     <svg     
         aria-label="Twitter Icon"
+        class = "twitter-blue"
         viewBox="0 0 24 24" 
         height="30" 
         width="30"

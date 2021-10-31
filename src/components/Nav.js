@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { MessageIcon, MoreIcon, NotificationIcon, ProfileIcon, SharpIcon, TwitterIcon } from "./Icons";
+import { HomeIcon, MessageIcon, MoreIcon, NotificationIcon, ProfileIcon, SharpIcon, TwitterIcon } from "./Icons";
 
 const NavWrapper = styled.div`
   position: fixed;
@@ -9,12 +9,6 @@ const NavWrapper = styled.div`
   padding: 1rem 0;
   z-index: 0;
 
-  .twitter-logo {
-    // position: relative;
-    // top: 6px;
-    // width: 100px;
-  }
-
   nav {
     flex-direction: column;
     display: flex;
@@ -22,6 +16,17 @@ const NavWrapper = styled.div`
     align-items: flex-start;
     margin: 0 auto;
     width: 930px;
+  }
+
+  .nav-section {
+    flex-direction: row;
+    display: flex;
+    padding: 12px;
+  }
+
+  .nav-section .nav-name {
+    margin-left: 20px;
+    font-size: 16px;
   }
 
   @media screen and (max-width: 970px) {
@@ -42,24 +47,58 @@ const Nav = () => {
   return (
     <NavWrapper>
       <nav>
-            <div className = "twitter-logo" >
+        <a href = "/home">
+            <div class = "nav-section" >
                 <TwitterIcon/>
             </div>
-            <div>
+        </a>
+        <a href = "/home">
+            <div class = "nav-section">
+                <HomeIcon/>
+                <div class = "nav-name">
+                    <span>Home</span>
+                </div>
+            </div>
+        </a>
+        <a href = "/explore">
+            <div class = "nav-section">
                 <SharpIcon/>
+                <div class = "nav-name">
+                    <span>Explore</span>
+                </div>
             </div>
-            <div>
+        </a>
+        <a href = "/notifications">
+        <div class = "nav-section">
             <NotificationIcon/>
+            <div class = "nav-name">
+                <span>Notifications</span>
             </div>
-            <div>
-            <MessageIcon/>
+        </div>
+        </a>
+        <a href = "/messages">
+            <div class = "nav-section">
+                <MessageIcon/>
+                <div class = "nav-name">
+                    <span>Messages</span>
+                </div>
             </div>
-            <div>
-            <ProfileIcon/>
+        </a>
+        {/* TODO 修改成用户的id */}
+        <a href = "/profile">
+            <div class = "nav-section">
+                <ProfileIcon/>
+                <div class = "nav-name">
+                        <span>Profile</span>
+                </div>
             </div>
-            <div>
-            <MoreIcon/>  
-            </div>
+        </a>
+        <div class = "nav-section">
+            <MoreIcon/>
+            <div class = "nav-name">
+                <span>More</span>
+            </div>  
+        </div>
       </nav>
     </NavWrapper>
   );

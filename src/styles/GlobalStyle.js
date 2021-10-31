@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+    .app {
+        display: flex;
+        flex-direction:row;
+    }
+
 	*, *:before, *:after {
 		padding: 0;
 		margin: 0;
@@ -17,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 1rem;
 		line-height: 1.7;
 		overflow-x: hidden;
+        display: flex;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

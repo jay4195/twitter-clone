@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
-import { HomeIcon, MessageIcon, MoreIcon, NotificationIcon, ProfileIcon, SharpIcon, TwitterIcon } from "./Icons";
+import { HomeIcon, HomeIconSelected, MessageIcon, MoreIcon, NotificationIcon, ProfileIcon, SharpIcon, SharpIconSelected, TwitterIcon } from "./Icons";
 
 const NavWrapper = styled.div`
-  position: fixed;
   left: 20px;
+  width: 40%;
   height: 100%;
   padding: 1rem 0;
   z-index: 0;
@@ -15,7 +15,7 @@ const NavWrapper = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
-    width: 930px;
+    padding-left: 200px;
   }
 
   .nav-section {
@@ -42,31 +42,54 @@ const NavWrapper = styled.div`
   }
 `;
 
+
 const Nav = () => {
+  const [navId, setNavId] = useState(0);
+
+  const clickLeftButton = () => {
+      setNavId(1);
+      console.log(navId);
+  };
 
   return (
     <NavWrapper>
       <nav>
-        <a href = "/home">
+        <a href = "/">
             <div class = "nav-section" >
                 <TwitterIcon/>
             </div>
         </a>
-        <a href = "/home">
+        <a href = "/">
+            {navId === 0 && (
+            <div class = "nav-section" onClick={clickLeftButton}>
+                <HomeIconSelected/>
+                <div class = "nav-name">
+                    <span>Home</span>
+                </div>
+            </div>)}
+            {navId !== 0 &&(
             <div class = "nav-section">
                 <HomeIcon/>
                 <div class = "nav-name">
                     <span>Home</span>
                 </div>
-            </div>
+            </div>)}
         </a>
         <a href = "/explore">
+        {navId === 1 &&(
+            <div class = "nav-section">
+                <SharpIconSelected/>
+                <div class = "nav-name">
+                    <span>Explore</span>
+                </div>
+            </div>)}
+            {navId !== 1 &&(
             <div class = "nav-section">
                 <SharpIcon/>
                 <div class = "nav-name">
                     <span>Explore</span>
                 </div>
-            </div>
+            </div>)}
         </a>
         <a href = "/notifications">
         <div class = "nav-section">
@@ -89,7 +112,7 @@ const Nav = () => {
             <div class = "nav-section">
                 <ProfileIcon/>
                 <div class = "nav-name">
-                        <span>Profile</span>
+                    <span>Profile</span>
                 </div>
             </div>
         </a>

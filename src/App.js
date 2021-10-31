@@ -1,11 +1,11 @@
-import Nav from './components/Nav';
+import Routing from "./Routing";
 import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   return (
-    <div className="App">
+    <div class = "app">
       <GlobalStyle/>
-      <Nav/>
+      <Routing/>
     </div>
   );
 }

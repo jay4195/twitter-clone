@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
     .twitter-blue {
         color: rgb(29, 155, 240);
     }
+    
+    .fill-color {
+        fill: currentcolor;
+    }
 
 	.pointer {
 		cursor: pointer;

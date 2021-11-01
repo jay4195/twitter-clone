@@ -18,6 +18,7 @@ const Routing = () => {
           <Route path="/messages" component={Messages} />
           <Route path="/notifications" component={Notification} />
           <Route path="/explore" component={Explore} />
+          <Route path="/home" component={Home} />
           <Route path="/:username" component={Profile}/>  
           <Route path="/" component={Home} />
         </Switch>

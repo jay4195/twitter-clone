@@ -25,6 +25,25 @@ const NavWrapper = styled.div`
     padding: 12px;
   }
 
+  .nav-logo {
+    flex-direction: row;
+    display: flex;
+    padding: 12px;
+  }
+
+  .boarder {
+    border-radius:9999px;
+    transition-duration:0.2s;
+  }
+
+  .nav-logo: hover {
+    background: rgb(29,155,240, 0.1);
+  }
+
+  .nav-section: hover {
+    background: rgb(230,230,230);
+  }
+
   .nav-section .nav-name {
     margin-left: 20px;
     font-size: 16px;
@@ -54,11 +73,11 @@ const Nav = () => {
     tabId = 0;
   } else if (start === "explore") {
     tabId = 1;
-  } else if (start === "nofications") {
+  } else if (start === "notifications") {
     tabId = 2;
   } else if (start === "messages") {
     tabId = 3;
-  } else {
+  } else if (start !== "") {
     tabId = 4;
   }
 
@@ -70,61 +89,54 @@ const Nav = () => {
   <NavWrapper>
     <nav>
       <a href = "/">
-        <div class = "nav-section" >
+        <div class = "nav-logo boarder" >
             <TwitterIcon/>
         </div>
       </a>
-      <a href = "/home">
-        <div class = "nav-section">
+      <a href = "/" className = "nav-section boarder">
           <HomeIcon select={navId === 0}/>
           <div class = "nav-name">
               {navId === 0 && (<b>Home</b>)}
               {navId !== 0 && (<span >Home</span>)}
-          </div>
         </div>
       </a>
       <a href = "/explore">
-        {navId === 1 && (
-        <div class = "nav-section" >
-            <SharpIconSelected/>
+        <div class = "nav-section boarder" >
+            <SharpIcon select={navId === 1}/>
             <div class = "nav-name">
-                <b>Explore</b>
+              {navId === 1 && (<b>Explore</b>)}
+              {navId !== 1 && (<span >Explore</span>)}
             </div>
-        </div>)}
-        {navId !== 1 &&(
-        <div class = "nav-section">
-            <SharpIcon/>
-            <div class = "nav-name">
-                <span>Explore</span>
-            </div>
-        </div>)}
+        </div>
       </a>
       <a href = "/notifications">
-        <div class = "nav-section">
-
-            <NotificationIcon/>
+        <div class = "nav-section boarder">
+            <NotificationIcon select={navId === 2}/>
             <div class = "nav-name">
-                <span>Notifications</span>
+                {navId === 2 && (<b>Notifications</b>)}
+                {navId !== 2 && (<span >Notifications</span>)}
             </div>
         </div>
       </a>
       <a href = "/messages">
-        <div class = "nav-section">
-            <MessageIcon/>
+        <div class = "nav-section boarder">
+            <MessageIcon select={navId === 3}/>
             <div class = "nav-name">
-                <span>Messages</span>
+                {navId === 3 && (<b>Messages</b>)}
+                {navId !== 3 && (<span >Messages</span>)}
             </div>
         </div>
       </a>
       <a href = "/profile">
-        <div class = "nav-section">
-            <ProfileIcon/>
+        <div class = "nav-section boarder">
+            <ProfileIcon select={navId === 4}/>
             <div class = "nav-name">
-                <span>Profile</span>
+                {navId === 4 && (<b>Profile</b>)}
+                {navId !== 4 && (<span >Profile</span>)}
             </div>
         </div>
       </a>
-      <div class = "nav-section">
+      <div class = "nav-section boarder">
         <MoreIcon/>
         <div class = "nav-name">
             <span>More</span>

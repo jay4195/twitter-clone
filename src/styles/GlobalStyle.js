@@ -25,9 +25,16 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+
+	h2 {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	h3, h4, h5, h6 {
 		font-weight: normal;
 	}
+	
 
 	a {
 		text-decoration: none;
@@ -58,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
 	*:focus {
 	  outline: none;
 	}
+
 `;
 
 export default GlobalStyle;

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 930px;
-  margin: 6.5rem auto;
+  height: 930px;
+
   margin-bottom: 4rem;
   flex-grow: 1;
   align-items: flex-end;

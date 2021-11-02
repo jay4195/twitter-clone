@@ -3,7 +3,7 @@ import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   return (
-    <div class = "app">
+    <div className = "app">
       <GlobalStyle/>
       <Routing/>
     </div>

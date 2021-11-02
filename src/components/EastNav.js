@@ -7,7 +7,7 @@ const NavWrapper = styled.div`
   padding: 1rem 0;
   z-index: 0;
   width: 30%;
-  eastnav {
+  nav {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -29,14 +29,14 @@ const NavWrapper = styled.div`
 const EastNav = () => {
   return (
     <NavWrapper>
-      <eastnav>
+      <nav>
         <span>
           You might like
         </span>
         <span>
         What's happening
         </span>
-      </eastnav>
+      </nav>
     </NavWrapper>
   );
 };

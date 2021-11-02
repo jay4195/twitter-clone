@@ -22,7 +22,7 @@ const NavWrapper = styled.div`
   .nav-section {
     flex-direction: row;
     display: flex;
-    padding: 12px;
+    padding: 8px;
   }
 
   .nav-logo {
@@ -34,6 +34,7 @@ const NavWrapper = styled.div`
   .boarder {
     border-radius:9999px;
     transition-duration:0.2s;
+    margin: 5px;
   }
 
   .nav-logo: hover {
@@ -89,56 +90,56 @@ const Nav = () => {
   <NavWrapper>
     <nav>
       <a href = "/">
-        <div class = "nav-logo boarder" >
+        <div className = "nav-logo boarder" >
             <TwitterIcon/>
         </div>
       </a>
       <a href = "/" className = "nav-section boarder">
           <HomeIcon select={navId === 0}/>
-          <div class = "nav-name">
+          <div className = "nav-name">
               {navId === 0 && (<b>Home</b>)}
               {navId !== 0 && (<span >Home</span>)}
         </div>
       </a>
       <a href = "/explore">
-        <div class = "nav-section boarder" >
+        <div className = "nav-section boarder" >
             <SharpIcon select={navId === 1}/>
-            <div class = "nav-name">
+            <div className = "nav-name">
               {navId === 1 && (<b>Explore</b>)}
               {navId !== 1 && (<span >Explore</span>)}
             </div>
         </div>
       </a>
       <a href = "/notifications">
-        <div class = "nav-section boarder">
+        <div className = "nav-section boarder">
             <NotificationIcon select={navId === 2}/>
-            <div class = "nav-name">
+            <div className = "nav-name">
                 {navId === 2 && (<b>Notifications</b>)}
                 {navId !== 2 && (<span >Notifications</span>)}
             </div>
         </div>
       </a>
       <a href = "/messages">
-        <div class = "nav-section boarder">
+        <div className = "nav-section boarder">
             <MessageIcon select={navId === 3}/>
-            <div class = "nav-name">
+            <div className = "nav-name">
                 {navId === 3 && (<b>Messages</b>)}
                 {navId !== 3 && (<span >Messages</span>)}
             </div>
         </div>
       </a>
       <a href = "/profile">
-        <div class = "nav-section boarder">
+        <div className = "nav-section boarder">
             <ProfileIcon select={navId === 4}/>
-            <div class = "nav-name">
+            <div className = "nav-name">
                 {navId === 4 && (<b>Profile</b>)}
                 {navId !== 4 && (<span >Profile</span>)}
             </div>
         </div>
       </a>
-      <div class = "nav-section boarder">
+      <div className = "nav-section boarder">
         <MoreIcon/>
-        <div class = "nav-name">
+        <div className = "nav-name">
             <span>More</span>
         </div>  
       </div>

@@ -1,45 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import TopNav from "../components/TopNav";
 
 const Wrapper = styled.div`
-  .profile-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1.4rem 0;
-  }
 
-  .profile-tab div {
-    display: flex;
-    cursor: pointer;
-    margin-right: 3rem;
-  }
-
-  .loader {
-    display: flex;
-    justify-content: center;
-  }
-
-  .infinite-scroll-wrapper {
-    object-fit: fill;
-  }
-
-  .profile-tab span {
-    padding-left: 0.3rem;
-  }
-
-  .profile-tab svg {
-    height: 24px;
-    width: 24px;
-  }
-
-  .end-message {
-    color: rgba(var(--f52,142,142,142),1);
-  }
-
-  hr {
-    border: 0.5px solid ${(props) => props.theme.borderColor};
+  .main {
+    width: 750px;
+    height: 950px;
+    border-color: rgb(239, 243, 244);
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
   }
 
 `;
@@ -48,9 +19,14 @@ const Profile = () => {
 
   const { username } = useParams();
 
+  var caption = "1 Tweet";
+
   return (
     <Wrapper>
-        <span>{username}</span>
+      <div className = "main">
+        <TopNav name = {username} caption = {caption}/>
+        <span> {username} </span>
+      </div>
     </Wrapper>
   );
 };

@@ -32,8 +32,6 @@ const NavWrapper = styled.div`
   }
 
   .boarder {
-    border-radius:9999px;
-    transition-duration:0.2s;
     margin: 5px;
   }
 
@@ -90,11 +88,11 @@ const Nav = () => {
   <NavWrapper>
     <nav>
       <a href = "/">
-        <div className = "nav-logo boarder" >
+        <div className = "nav-logo boarder round-border" >
             <TwitterIcon/>
         </div>
       </a>
-      <a href = "/" className = "nav-section boarder">
+      <a href = "/" className = "nav-section boarder round-border">
           <HomeIcon select={navId === 0}/>
           <div className = "nav-name">
               {navId === 0 && (<b>Home</b>)}
@@ -102,7 +100,7 @@ const Nav = () => {
         </div>
       </a>
       <a href = "/explore">
-        <div className = "nav-section boarder" >
+        <div className = "nav-section boarder round-border" >
             <SharpIcon select={navId === 1}/>
             <div className = "nav-name">
               {navId === 1 && (<b>Explore</b>)}
@@ -111,7 +109,7 @@ const Nav = () => {
         </div>
       </a>
       <a href = "/notifications">
-        <div className = "nav-section boarder">
+        <div className = "nav-section boarder round-border">
             <NotificationIcon select={navId === 2}/>
             <div className = "nav-name">
                 {navId === 2 && (<b>Notifications</b>)}
@@ -120,7 +118,7 @@ const Nav = () => {
         </div>
       </a>
       <a href = "/messages">
-        <div className = "nav-section boarder">
+        <div className = "nav-section boarder round-border">
             <MessageIcon select={navId === 3}/>
             <div className = "nav-name">
                 {navId === 3 && (<b>Messages</b>)}
@@ -129,7 +127,7 @@ const Nav = () => {
         </div>
       </a>
       <a href = "/profile">
-        <div className = "nav-section boarder">
+        <div className = "nav-section boarder round-border">
             <ProfileIcon select={navId === 4}/>
             <div className = "nav-name">
                 {navId === 4 && (<b>Profile</b>)}
@@ -137,7 +135,7 @@ const Nav = () => {
             </div>
         </div>
       </a>
-      <div className = "nav-section boarder">
+      <div className = "nav-section boarder round-border">
         <MoreIcon/>
         <div className = "nav-name">
             <span>More</span>

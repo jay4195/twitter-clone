@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { LeftArrow } from "./Icons";
 
 const NavWrapper = styled.div`
 
@@ -12,9 +13,31 @@ const NavWrapper = styled.div`
     border-width: 0px 0px 1px 0px;
   }
 
-  .top-nav .top-name {
-    padding-left: 16px;
+  .top-nav {
+    padding-left: 10px;
   }
+
+  .top-nav .arrow {
+    padding:6px;
+    line-height: 0;
+  }
+
+  .top-nav .arrow: hover {
+    background: rgb(230,230,230);
+  }
+
+  .top-nav .username {
+    padding-left: 16px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .top-nav .caption {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(83, 100, 113);
+  }
+
 
   @media screen and (max-width: 970px) {
     nav {
@@ -31,15 +54,35 @@ const NavWrapper = styled.div`
 
 const TopNav = (props) => {
 
-  return (
-    <NavWrapper>
+  const showNameList = ["Home", "Notifications", "Messages"];
+
+  if (showNameList.indexOf(props.name) > -1) {
+    return (
+      <NavWrapper>
+          <nav className = "top-nav">
+              <h2 className = "top-name">
+                  {props.name}
+              </h2>
+          </nav>
+      </NavWrapper>
+    );
+  } else {
+    return (
+      <NavWrapper>
         <nav className = "top-nav">
-            <h2 className = "top-name">
-                {props.name}
-            </h2>
+            <span className = "arrow round-border">
+              <LeftArrow height = "20" width = "20"/>
+            </span>
+            <span className = "username">
+              {props.name}
+            </span>
+            <span className = "caption">
+              {props.caption}
+            </span>
         </nav>
-    </NavWrapper>
-  );
+      </NavWrapper>
+    );
+  }
 };
 
 export default TopNav;

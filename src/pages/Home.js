@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Home = () => {
   return (
     <Wrapper>
-        <span>Home</span>
+        <span>Home1</span>
     </Wrapper>
   );
 };

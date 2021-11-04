@@ -19,8 +19,6 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-		font-size: 1rem;
-		line-height: 1.7;
 		overflow-x: hidden;
         display: flex;
 	}
@@ -60,6 +58,11 @@ const GlobalStyle = createGlobalStyle`
 
 	.bold {
 		font-weight: 500;
+	}
+
+	.round-border {
+		border-radius:9999px;
+		transition-duration:0.2s;
 	}
 
 	*:focus {

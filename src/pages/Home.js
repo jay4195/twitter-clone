@@ -25,7 +25,7 @@ const Home = () => {
     <Wrapper>
       <div className = "main">
         <TopNav name = "Home"/>
-        <span>Home1</span>
+        <span>Home</span>
       </div>
     </Wrapper>
   );

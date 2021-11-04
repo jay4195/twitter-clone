@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import TopNav from "../components/TopNav";
+import Avatar from "../components/Avatar";
 
 const Wrapper = styled.div`
 
@@ -33,6 +34,7 @@ const Profile = () => {
         <TopNav name = {username} caption = {caption}/>
         <div className = "backgroud-pic">
         </div>
+        <Avatar url="/default_profile_400x400.png"/>
         <span> {username} </span>
       </div>
     </Wrapper>

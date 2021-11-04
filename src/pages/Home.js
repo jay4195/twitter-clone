@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
 
   .main {
-    width: 750px;
+    width: 598px;
     height: 950px;
     border-color: rgb(239, 243, 244);
     border-style: solid;

@@ -11,9 +11,6 @@ const NavWrapper = styled.div`
     border-color: rgb(239, 243, 244);
     border-style: solid;
     border-width: 0px 0px 1px 0px;
-  }
-
-  .top-nav {
     padding-left: 10px;
   }
 
@@ -27,7 +24,6 @@ const NavWrapper = styled.div`
   }
 
   .top-nav .username {
-    padding-left: 16px;
     font-weight: 700;
     font-size: 14px;
   }
@@ -36,6 +32,12 @@ const NavWrapper = styled.div`
     font-size: 12px;
     font-weight: 400;
     color: rgb(83, 100, 113);
+  }
+
+  .profile-top {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -73,12 +75,14 @@ const TopNav = (props) => {
             <span className = "arrow round-border">
               <LeftArrow height = "20" width = "20"/>
             </span>
-            <span className = "username">
-              {props.name}
-            </span>
-            <span className = "caption">
-              {props.caption}
-            </span>
+            <div className = "profile-top">
+              <span className = "username">
+                {props.name}
+              </span>
+              <span className = "caption">
+                {props.caption}
+              </span>
+            </div>
         </nav>
       </NavWrapper>
     );

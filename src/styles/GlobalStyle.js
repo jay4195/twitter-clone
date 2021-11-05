@@ -60,6 +60,12 @@ const GlobalStyle = createGlobalStyle`
 		font-weight: 500;
 	}
 
+	.button-border {
+		border-color: rgb(207, 217, 222);
+		border-width: 1px;
+		border-style: solid;
+	}
+
 	.round-border {
 		border-radius:9999px;
 		transition-duration:0.2s;

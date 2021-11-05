@@ -74,10 +74,10 @@ const Profile = () => {
           <div>
             <span className="bold-font default-side"> {username} </span>
             <div className="default-side"> @{username} </div>
-            <div> caption </div>
-            <div className="basic-info">basic information</div>
+            <div className="default-side"> caption </div>
+            <div className="basic-info default-side">basic information</div>
             <div>
-              <span>4 Following</span>
+              <span className="default-side">4 Following</span>
               <span>0 Followers</span>
             </div>
           </div>

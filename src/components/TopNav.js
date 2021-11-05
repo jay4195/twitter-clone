@@ -11,7 +11,6 @@ const NavWrapper = styled.div`
     border-color: rgb(239, 243, 244);
     border-style: solid;
     border-width: 0px 0px 1px 0px;
-    padding-left: 10px;
   }
 
   .top-nav .arrow {

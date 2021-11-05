@@ -32,7 +32,6 @@ const GlobalStyle = createGlobalStyle`
 	h3, h4, h5, h6 {
 		font-weight: normal;
 	}
-	
 
 	a {
 		text-decoration: none;
@@ -56,8 +55,17 @@ const GlobalStyle = createGlobalStyle`
 	  cursor: pointer;
 	}
 
-	.bold {
-		font-weight: 500;
+	.bold-font {
+		font-weight: 800;
+	}
+
+	.line-space {
+		margin-bottom: 12px;
+	}
+
+	.default-side {
+		margin-left: 16px;
+		margin-right: 16px;
 	}
 
 	.button-border {

@@ -24,8 +24,7 @@ const Wrapper = styled.div`
   .profile-avatar {
     height: 131px;
     weight: 131px;
-    margin-top: -13%;
-    margin-left: 2%;
+    margin-top: -60%;
   }
 
   .avatar-border {
@@ -37,6 +36,19 @@ const Wrapper = styled.div`
   .button-name {
     font-size: 15px;
     font-weight: 700;
+  }
+
+  .edit-profile-btn {
+    margin-top: 1%;
+  }
+
+  .edit-profile-tab {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .profile-username {
+
   }
 
 `;
@@ -53,9 +65,22 @@ const Profile = () => {
         <TopNav name = {username} caption = {caption}/>
         <div className = "backgroud-pic">
         </div>
-        <Avatar url="/default_profile_400x400.png"/>
-        <Button name = "Edit profile" color = "white"></Button>
-        <span> {username} </span>
+          <div className = "edit-profile-tab default-side">
+            <Avatar url="/default_profile_400x400.png"/>
+            <div className = "edit-profile-btn">
+              <Button name = "Edit profile" color = "white"></Button>
+            </div>
+          </div>
+          <div>
+            <span className="bold-font default-side"> {username} </span>
+            <div className="default-side"> @{username} </div>
+            <div> caption </div>
+            <div className="basic-info">basic information</div>
+            <div>
+              <span>4 Following</span>
+              <span>0 Followers</span>
+            </div>
+          </div>
       </div>
     </Wrapper>
   );

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import TopNav from "../components/TopNav";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
+import { BalloonIcon, CalendarIcon, LocationIcon } from "../components/Icons";
 
 const Wrapper = styled.div`
 
@@ -47,8 +48,9 @@ const Wrapper = styled.div`
     justify-content: space-between;
   }
 
-  .profile-username {
-
+  .basic-info {
+    display: flex;
+    align-items:center;
   }
 
 `;
@@ -71,14 +73,23 @@ const Profile = () => {
               <Button name = "Edit profile" color = "white"></Button>
             </div>
           </div>
-          <div>
-            <span className="bold-font default-side"> {username} </span>
-            <div className="default-side"> @{username} </div>
-            <div className="default-side"> caption </div>
-            <div className="basic-info default-side">basic information</div>
-            <div>
-              <span className="default-side">4 Following</span>
-              <span>0 Followers</span>
+          <div className = "line-space">
+            <span className="bold-font default-side line-space"> {username} </span>
+            <div className="default-side twitter-grey line-space"> @{username} </div>
+            <div className="default-side line-space"> caption </div>
+            <div className="basic-info default-side line-space">
+              <LocationIcon className = "fill-color twitter-grey" height = "1.25em"/>
+              <span className="twitter-grey">Beijing, China</span>
+              <BalloonIcon className = "fill-color twitter-grey" height = "1.25em"/>
+              <span className="twitter-grey">Born March 27, 1995</span>
+              <CalendarIcon className = "fill-color twitter-grey" height = "1.25em"/>
+              <span className="twitter-grey">Joined August 2018</span>
+            </div>
+            <div className="default-side">
+              <b>0</b>
+              <span className="twitter-grey">Following</span>
+              <b>0</b>
+              <span className="twitter-grey">Followers</span>
             </div>
           </div>
       </div>

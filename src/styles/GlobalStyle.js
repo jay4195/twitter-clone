@@ -42,6 +42,10 @@ const GlobalStyle = createGlobalStyle`
     .twitter-blue {
         color: rgb(29, 155, 240);
     }
+
+	.twitter-grey {
+        color: rgb(83, 100, 113);
+    }
     
     .fill-color {
         fill: currentcolor;
@@ -52,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	button, svg {
-	  cursor: pointer;
+		cursor: pointer;
 	}
 
 	.bold-font {

@@ -45,7 +45,6 @@ const NavWrapper = styled.div`
 
   .nav-section .nav-name {
     margin-left: 20px;
-    font-size: 16px;
   }
 
   @media screen and (max-width: 970px) {
@@ -89,20 +88,20 @@ const Nav = () => {
     <nav>
       <a href = "/">
         <div className = "nav-logo boarder round-border" >
-            <TwitterIcon/>
+            <TwitterIcon height="2rem"/>
         </div>
       </a>
       <a href = "/" className = "nav-section boarder round-border">
-          <HomeIcon select={navId === 0}/>
-          <div className = "nav-name">
+          <HomeIcon select={navId === 0} height="1.75rem"/>
+          <div className = "nav-name tall-font">
               {navId === 0 && (<b>Home</b>)}
               {navId !== 0 && (<span >Home</span>)}
         </div>
       </a>
       <a href = "/explore">
         <div className = "nav-section boarder round-border" >
-            <SharpIcon select={navId === 1}/>
-            <div className = "nav-name">
+            <SharpIcon select={navId === 1} height="1.75rem"/>
+            <div className = "nav-name tall-font tall-font">
               {navId === 1 && (<b>Explore</b>)}
               {navId !== 1 && (<span >Explore</span>)}
             </div>
@@ -110,8 +109,8 @@ const Nav = () => {
       </a>
       <a href = "/notifications">
         <div className = "nav-section boarder round-border">
-            <NotificationIcon select={navId === 2}/>
-            <div className = "nav-name">
+            <NotificationIcon select={navId === 2} height="1.75rem"/>
+            <div className = "nav-name tall-font">
                 {navId === 2 && (<b>Notifications</b>)}
                 {navId !== 2 && (<span >Notifications</span>)}
             </div>
@@ -119,8 +118,8 @@ const Nav = () => {
       </a>
       <a href = "/messages">
         <div className = "nav-section boarder round-border">
-            <MessageIcon select={navId === 3}/>
-            <div className = "nav-name">
+            <MessageIcon select={navId === 3} height="1.75rem"/>
+            <div className = "nav-name tall-font">
                 {navId === 3 && (<b>Messages</b>)}
                 {navId !== 3 && (<span >Messages</span>)}
             </div>
@@ -128,16 +127,16 @@ const Nav = () => {
       </a>
       <a href = "/profile">
         <div className = "nav-section boarder round-border">
-            <ProfileIcon select={navId === 4}/>
-            <div className = "nav-name">
+            <ProfileIcon select={navId === 4} height="1.75rem"/>
+            <div className = "nav-name tall-font">
                 {navId === 4 && (<b>Profile</b>)}
                 {navId !== 4 && (<span >Profile</span>)}
             </div>
         </div>
       </a>
       <div className = "nav-section boarder round-border">
-        <MoreIcon/>
-        <div className = "nav-name">
+        <MoreIcon height="1.75rem"/>
+        <div className = "nav-name tall-font">
             <span>More</span>
         </div>  
       </div>

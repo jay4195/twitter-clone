@@ -50,7 +50,23 @@ const Wrapper = styled.div`
 
   .basic-info {
     display: flex;
-    align-items:center;
+    align-items: center;
+  }
+
+  .basic-info .svg {
+    margin-right: 4px;
+  }
+
+  .basic-info .tab {
+    margin-right: 12px;
+  }
+
+  .following {
+    margin-right: 20px;
+  }
+
+  .follow-tab .number {
+    margin-right: 4px;
   }
 
 `;
@@ -74,21 +90,21 @@ const Profile = () => {
             </div>
           </div>
           <div className = "line-space">
-            <span className="bold-font default-side line-space"> {username} </span>
+            <span className="bold-font default-side line-space tall-font"> {username} </span>
             <div className="default-side twitter-grey line-space"> @{username} </div>
             <div className="default-side line-space"> caption </div>
             <div className="basic-info default-side line-space">
-              <LocationIcon className = "fill-color twitter-grey" height = "1.25em"/>
-              <span className="twitter-grey">Beijing, China</span>
-              <BalloonIcon className = "fill-color twitter-grey" height = "1.25em"/>
-              <span className="twitter-grey">Born March 27, 1995</span>
-              <CalendarIcon className = "fill-color twitter-grey" height = "1.25em"/>
-              <span className="twitter-grey">Joined August 2018</span>
+              <LocationIcon className = "fill-color twitter-grey svg" height = "1.25em"/>
+              <span className="twitter-grey tab">Beijing, China</span>
+              <BalloonIcon className = "fill-color twitter-grey svg" height = "1.25em"/>
+              <span className="twitter-grey tab">Born March 27, 1995</span>
+              <CalendarIcon className = "fill-color twitter-grey svg" height = "1.25em"/>
+              <span className="twitter-grey tab">Joined August 2018</span>
             </div>
-            <div className="default-side">
-              <b>0</b>
-              <span className="twitter-grey">Following</span>
-              <b>0</b>
+            <div className="default-side follow-tab">
+              <b className="number">0</b>
+              <span className="twitter-grey following">Following</span>
+              <b className="number">0</b>
               <span className="twitter-grey">Followers</span>
             </div>
           </div>

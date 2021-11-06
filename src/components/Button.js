@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const ButtonWrapper = styled.div`
     .plain-button {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
         background-color:transparent;
         padding: 5px 10px 5px 10px;
     }

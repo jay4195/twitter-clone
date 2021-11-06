@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 	html {
-		font-size: 16px;
+		font-size: 15px;
 		box-sizing: border-box;
 	}
 
@@ -81,6 +81,14 @@ const GlobalStyle = createGlobalStyle`
 	.round-border {
 		border-radius:9999px;
 		transition-duration:0.2s;
+	}
+
+	.tall-font {
+		font-size: 20px;
+	}
+
+	.small-font {
+		font-size: 14px;
 	}
 
 	*:focus {

@@ -24,7 +24,6 @@ const NavWrapper = styled.div`
 
   .top-nav .username {
     font-weight: 700;
-    font-size: 14px;
   }
 
   .top-nav .caption {
@@ -75,7 +74,7 @@ const TopNav = (props) => {
               <LeftArrow height = "20" width = "20"/>
             </span>
             <div className = "profile-top">
-              <span className = "username">
+              <span className = "username tall-font">
                 {props.name}
               </span>
               <span className = "caption">

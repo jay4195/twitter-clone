@@ -5,6 +5,7 @@ import TopNav from "../components/TopNav";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
 import { BalloonIcon, CalendarIcon, LocationIcon } from "../components/Icons";
+import TabList from "../components/TabList";
 
 const Wrapper = styled.div`
 
@@ -77,6 +78,8 @@ const Profile = () => {
 
   var caption = "1 Tweet";
 
+  const profileList = ["Tweets", "Tweets & replies", "Media", "Likes"];
+
   return (
     <Wrapper>
       <div className = "main">
@@ -107,6 +110,9 @@ const Profile = () => {
               <b className="number">0</b>
               <span className="twitter-grey">Followers</span>
             </div>
+          </div>
+          <div>
+              <TabList tabs={profileList}/>
           </div>
       </div>
     </Wrapper>

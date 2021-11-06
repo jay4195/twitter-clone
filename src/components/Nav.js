@@ -39,12 +39,17 @@ const NavWrapper = styled.div`
     background: rgb(29,155,240, 0.1);
   }
 
+  .nav-section {
+    padding: 12px;
+  }
+
   .nav-section: hover {
     background: rgb(230,230,230);
   }
 
   .nav-section .nav-name {
     margin-left: 20px;
+    margin-right: 16px;
   }
 
   @media screen and (max-width: 970px) {

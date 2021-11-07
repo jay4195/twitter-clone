@@ -21,6 +21,11 @@ const TabListWrapper = styled.div`
 
     .tab-wrapper :hover {
         background: rgb(230,230,230);
+        transition-duration:0.2s;
+    }
+
+    .tab-wrapper .detail-tab :hover {
+        background: none;
     }
 
     .tab-wrapper .tab {

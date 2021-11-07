@@ -70,6 +70,12 @@ const Wrapper = styled.div`
     margin-right: 4px;
   }
 
+  .tab-container {
+    border-color: rgb(239, 243, 244);
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+  }
+
 `;
 
 const Profile = () => {
@@ -111,7 +117,7 @@ const Profile = () => {
               <span className="twitter-grey">Followers</span>
             </div>
           </div>
-          <div>
+          <div className = "tab-container">
               <TabList tabs={profileList}/>
           </div>
       </div>

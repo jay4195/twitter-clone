@@ -5,7 +5,7 @@ import { HomeIcon, HomeIconSelected, MessageIcon, MoreIcon, NotificationIcon, Pr
 
 const NavWrapper = styled.div`
   left: 20px;
-  width: 40%;
+  width: 55%;
   height: 100%;
   padding: 1rem 0;
   z-index: 0;
@@ -35,6 +35,9 @@ const NavWrapper = styled.div`
     margin: 5px;
   }
 
+  .nav-fixed{
+    position:fixed;
+  }
   .nav-logo: hover {
     background: rgb(29,155,240, 0.1);
   }
@@ -91,16 +94,19 @@ const Nav = () => {
   return (
   <NavWrapper>
     <nav>
+      <div className = "nav-fixed">
       <a href = "/">
         <div className = "nav-logo boarder round-border" >
             <TwitterIcon height="2rem"/>
         </div>
       </a>
-      <a href = "/" className = "nav-section boarder round-border">
-          <HomeIcon select={navId === 0} height="1.75rem"/>
-          <div className = "nav-name tall-font">
+      <a href = "/" >
+        <div className = "nav-section boarder round-border">
+            <HomeIcon select={navId === 0} height="1.75rem"/>
+            <div className = "nav-name tall-font">
               {navId === 0 && (<b>Home</b>)}
               {navId !== 0 && (<span >Home</span>)}
+            </div>
         </div>
       </a>
       <a href = "/explore">
@@ -144,6 +150,7 @@ const Nav = () => {
         <div className = "nav-name tall-font">
             <span>More</span>
         </div>  
+      </div>
       </div>
     </nav>
   </NavWrapper>

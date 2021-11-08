@@ -5,6 +5,18 @@ import { LeftArrow } from "./Icons";
 const NavWrapper = styled.div`
 
   .top-nav {
+    width:598px;
+    background:white;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    height: 53px;
+    border-color: rgb(239, 243, 244);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+  }
+  
+  .top-nav-padding {
     display: flex;
     align-items: center;
     height: 53px;
@@ -82,6 +94,7 @@ const TopNav = (props) => {
               </span>
             </div>
         </nav>
+        <div className = "top-nav-padding"></div>
       </NavWrapper>
     );
   }

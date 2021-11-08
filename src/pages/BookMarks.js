@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Home = () => {
+const BookMarks = () => {
   return (
     <Wrapper>
         <span>BookMarks</span>
@@ -17,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default BookMarks;
